@@ -40,8 +40,6 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/tokyonight',
-
   require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
@@ -68,9 +66,10 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
+    border = 'single',
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
     icons = vim.g.have_nerd_font and {} or {
@@ -87,6 +86,23 @@ require('lazy').setup({
       start = '🚀',
       task = '📌',
       lazy = '💤 ',
+    },
+    performance = {
+      rtp = {
+        reset = true, -- reset the runtime path to $VIMRUNTIME and your config directory
+        ---@type string[]
+        paths = {}, -- add any custom paths here that you want to includes in the rtp
+        ---@type string[] list any plugins you want to disable here
+        disabled_plugins = {
+          'gzip',
+          'matchit',
+          -- 'netrwPlugin',
+          'tarPlugin',
+          'tohtml',
+          'tutor',
+          'zipPlugin',
+        },
+      },
     },
   },
 })
