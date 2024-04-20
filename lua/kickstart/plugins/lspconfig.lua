@@ -174,6 +174,9 @@ return {
             gopls = {
               usePlaceholders = true,
               staticcheck = true,
+              hints = {
+                assignVariableTypes = true,
+              },
             },
           },
         },
