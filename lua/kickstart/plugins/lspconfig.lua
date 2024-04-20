@@ -16,18 +16,38 @@ return {
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
+    event = 'BufReadPost',
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
-      { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+      { 'williamboman/mason.nvim', config = true, opts = {
+        ui = { border = 'single' },
+      } }, -- NOTE: Must be loaded before dependants
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+      {
+        'j-hui/fidget.nvim',
+        opts = {
+          notification = {
+            window = {
+              normal_hl = 'Comment', -- Base highlight group in the notification window
+              winblend = 0, -- Background color opacity in the notification window
+              border = 'single', -- Border around the notification window
+              zindex = 45, -- Stacking priority of the notification window
+            },
+          },
+        },
 
       -- Allows extra capabilities provided by nvim-cmp
       'hrsh7th/cmp-nvim-lsp',
+        -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
+        -- used for completion, annotations and signatures of Neovim apis
+        -- {
+        --   'folke/neodev.nvim',
+        -- },
+      },
     },
     config = function()
       -- Brief aside: **What is LSP?**
@@ -166,10 +186,6 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
-        -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -177,7 +193,30 @@ return {
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
-        --
+        gopls = {
+          settings = {
+            gopls = {
+              usePlaceholders = true,
+              staticcheck = true,
+            },
+          },
+        },
+        pyright = {},
+        -- dockerls = {},
+        -- helm_ls = {},
+        -- yamlls = {},
+        -- html = {},
+        typos_lsp = {
+          config = {
+            -- Logging level of the language server. Logs appear in :LspLog. Defaults to error.
+            cmd_env = { RUST_LOG = 'error' },
+          },
+          init_options = {
+            -- How typos are rendered in the editor, eg: as errors, warnings, information, or hints.
+            -- Defaults to error.
+            diagnosticSeverity = 'Error',
+          },
+        },
 
         lua_ls = {
           -- cmd = {...},
