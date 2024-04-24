@@ -25,7 +25,7 @@ return {
         },
         -- Heavily modiffied color palette to resemble the gruvbox-material. Taken form: https://github.com/f4z3r/gruvbox-material.nvim/blob/master/lua/gruvbox-material/colors.lua
         palette_overrides = {
-          -- Background colors
+          -- Background colors | Didn't change any of the bg colors
           dark0 = '#282828',
           dark1 = '#3c3836',
           dark2 = '#504945',
@@ -59,23 +59,6 @@ return {
           light_red = '#ae5858',
           light_green = '#6f8352',
           light_aqua = '#a96b2c',
-          -- Contrast options
-          light_red_soft = '#f78b7f',
-          dark_red_soft = '#7b2c2f',
-          light_red_hard = '#fc9690',
-          dark_red_hard = '#792329',
-          light0_hard = '#f9f5d7',
-          light0_soft = '#f2e5bc',
-          dark0_hard = '#1d2021',
-          dark0_soft = '#32302f',
-          dark_aqua_hard = '#3e4934',
-          dark_green_hard = '#5a633a',
-          dark_green_soft = '#686d43',
-          light_green_hard = '#d3d6a5',
-          light_green_soft = '#cecb94',
-          dark_aqua_soft = '#525742',
-          light_aqua_hard = '#e6e9c1',
-          light_aqua_soft = '#e1dbac',
         },
       }
     end,
