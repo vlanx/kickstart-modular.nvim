@@ -105,6 +105,9 @@ require('lazy').setup({
       },
     },
   },
+  dev = {
+    path = '~/Github',
+  },
 })
 
 -- vim: ts=2 sts=2 sw=2 et
