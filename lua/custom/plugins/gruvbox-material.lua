@@ -7,8 +7,20 @@ return {
     priority = 1000,
     dev = true,
     config = function()
-      -- load the colorscheme here
-      vim.g.gruvbox_material_transparent_background = 1
+      require('gruvbox-material').setup {
+        italics = true, -- enable italics in general
+        comments = {
+          italics = true, -- enable italic comments
+        },
+        background = {
+          transparent = true, -- set the background to transparent
+        },
+        float = {
+          force_background = false, -- force background on floats even when background.transparent is set
+          background_color = nil, -- set color for float backgrounds. If nil, uses the default color set
+          -- by the colorscheme
+        },
+      }
     end,
   },
 }
