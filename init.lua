@@ -107,6 +107,7 @@ require 'lazy-plugins'
 
 -- Load the colorscheme after everything has been loaded
 -- vim.cmd.colorscheme 'no-clown-fiesta'
+-- vim.cmd.colorscheme 'gruvbox-material'
 vim.cmd.colorscheme 'gruvbox'
 
 -- The line beneath this is called `modeline`. See `:help modeline`

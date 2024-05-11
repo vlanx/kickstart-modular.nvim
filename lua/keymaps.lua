@@ -70,7 +70,21 @@ vim.keymap.set('n', '<leader>tt', function()
     vim.diagnostic.hide()
   end
 end, { desc = 'Toggle Diagnostics' })
--- Keymap to change the spell check suggestions
--- vim.keymap.set({ 'v', 'n' }, '<leader>l', 'z=', { desc = 'Show list of suggested corrections', remap = true })
+
+-- Neogen keymap to generate annotations
+vim.api.nvim_set_keymap('n', '<Leader>nf', ":lua require('neogen').generate({ type = 'func' })<CR>", { desc = 'Generate Annotations', noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>nt', ":lua require('neogen').generate({ type = 'type' })<CR>", { desc = 'Generate Annotations', noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>nc', ":lua require('neogen').generate({ type = 'class' })<CR>", { desc = 'Generate Annotations', noremap = true })
+
+-- Keymap to open a split for a terminal session and exit.
+-- It also changes the terminal directory to the file from where it was open from.
+vim.keymap.set('n', '<leader>ot', function()
+  vim.cmd 'cd %:p:h'
+  vim.cmd 'botright 15 split'
+  vim.cmd 'terminal'
+  vim.cmd 'startinsert'
+end)
+vim.keymap.set('t', 'kj', '<C-\\><C-n>', options)
+vim.keymap.set('t', 'jk', '<C-\\><C-n>', options)
 
 -- vim: ts=2 sts=2 sw=2 et
