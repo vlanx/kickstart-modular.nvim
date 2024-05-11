@@ -79,8 +79,8 @@ vim.api.nvim_set_keymap('n', '<Leader>nc', ":lua require('neogen').generate({ ty
 -- Keymap to open a split for a terminal session and exit.
 -- It also changes the terminal directory to the file from where it was open from.
 vim.keymap.set('n', '<leader>ot', function()
-  vim.cmd 'cd %:p:h'
   vim.cmd 'botright 15 split'
+  vim.cmd 'lcd %:p:h'
   vim.cmd 'terminal'
   vim.cmd 'startinsert'
 end)
