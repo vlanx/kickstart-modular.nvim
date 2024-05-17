@@ -186,7 +186,10 @@ return {
               usePlaceholders = true,
               staticcheck = true,
               hints = {
-                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                functionTypeParameters = true,
+                parameterNames = true,
               },
             },
           },
@@ -196,18 +199,6 @@ return {
         -- helm_ls = {},
         -- yamlls = {},
         -- html = {},
-        typos_lsp = {
-          config = {
-            -- Logging level of the language server. Logs appear in :LspLog. Defaults to error.
-            cmd_env = { RUST_LOG = 'error' },
-          },
-          init_options = {
-            -- How typos are rendered in the editor, eg: as errors, warnings, information, or hints.
-            -- Defaults to error.
-            diagnosticSeverity = 'Error',
-          },
-        },
-
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
