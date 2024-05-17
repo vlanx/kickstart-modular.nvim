@@ -86,6 +86,8 @@ vim.diagnostic.config {
   },
 }
 
-vim.o.background = 'dark'
+-- Set spell and its options
+vim.o.spell = true
+vim.o.spelloptions = 'camel'
 
 -- vim: ts=2 sts=2 sw=2 et
