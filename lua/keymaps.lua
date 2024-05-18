@@ -88,6 +88,6 @@ vim.keymap.set('t', 'kj', '<C-\\><C-n>', options)
 vim.keymap.set('t', 'jk', '<C-\\><C-n>', options)
 
 -- Keymap to bring up Whichkey's spell suggestions (z=)
-vim.keymap.set({ 'n', 'i' }, '<leader>z', 'z=', { desc = 'Spell Suggestions', remap = true })
+vim.keymap.set('n', '<leader>sc', 'z=', { desc = '[S]pell Check suggestions', remap = true })
 
 -- vim: ts=2 sts=2 sw=2 et
