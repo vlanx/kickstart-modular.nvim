@@ -1,9 +1,6 @@
 return {
   {
     'stevearc/oil.nvim',
-    -- Disable for now, im using telescope file browser
-    enabled = false,
-    opts = {},
     -- Optional dependencies
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
@@ -18,6 +15,6 @@ return {
       }
     end,
     -- Uncomment this if you're gonna use oil
-    -- vim.keymap.set('n', '-', '<CMD>Oil --float<CR>', { desc = 'Open parent directory' }),
+    vim.keymap.set('n', '-', '<CMD>Oil --float<CR>', { desc = 'Open parent directory' }),
   },
 }
