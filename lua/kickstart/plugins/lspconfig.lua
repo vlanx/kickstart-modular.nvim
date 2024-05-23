@@ -44,9 +44,10 @@ return {
       'hrsh7th/cmp-nvim-lsp',
         -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
         -- used for completion, annotations and signatures of Neovim apis
-        -- {
-        --   'folke/neodev.nvim',
-        -- },
+        {
+          'folke/neodev.nvim',
+          opts = {},
+        },
       },
     },
     config = function()
