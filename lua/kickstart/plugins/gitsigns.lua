@@ -56,9 +56,11 @@ return {
         map('n', '<leader>hR', gitsigns.reset_buffer, { desc = 'git [R]eset buffer' })
         map('n', '<leader>hp', gitsigns.preview_hunk, { desc = 'git [p]review hunk' })
         map('n', '<leader>hb', gitsigns.blame_line, { desc = 'git [b]lame line' })
-        map('n', '<leader>hd', gitsigns.diffthis, { desc = 'git [d]iff against index' })
+        map('n', '<leader>hd', function()
+          gitsigns.diffthis(nil, { split = 'botright' }) -- Split and maintain the cursor on the working file window. Split diff to the right.
+        end, { desc = 'git [D]iff against index' })
         map('n', '<leader>hD', function()
-          gitsigns.diffthis '@'
+          gitsigns.diffthis('@', { split = 'botright' }) -- Split and maintain the cursor on the working file window. Split diff to the right.
         end, { desc = 'git [D]iff against last commit' })
         -- Toggles
         map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = '[T]oggle git show [b]lame line' })
