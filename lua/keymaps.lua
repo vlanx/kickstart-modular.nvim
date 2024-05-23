@@ -72,9 +72,9 @@ vim.keymap.set('n', '<leader>tt', function()
 end, { desc = 'Toggle Diagnostics' })
 
 -- Neogen keymap to generate annotations
-vim.api.nvim_set_keymap('n', '<Leader>nf', ":lua require('neogen').generate({ type = 'func' })<CR>", { desc = 'Generate Annotations', noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>nt', ":lua require('neogen').generate({ type = 'type' })<CR>", { desc = 'Generate Annotations', noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>nc', ":lua require('neogen').generate({ type = 'class' })<CR>", { desc = 'Generate Annotations', noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>nf', ":lua require('neogen').generate({ type = 'func' })<CR>", { desc = 'Generate Function Annotations', noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>nt', ":lua require('neogen').generate({ type = 'type' })<CR>", { desc = 'Generate Type Annotations', noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>nc', ":lua require('neogen').generate({ type = 'class' })<CR>", { desc = 'Generate Class Annotations', noremap = true })
 
 -- Keymap to open a split for a terminal session and exit.
 -- It also changes the terminal directory to the file from where it was open from.
@@ -89,5 +89,11 @@ vim.keymap.set('t', 'jk', '<C-\\><C-n>', options)
 
 -- Keymap to bring up Whichkey's spell suggestions (z=)
 vim.keymap.set('n', '<leader>sc', 'z=', { desc = '[S]pell Check suggestions', remap = true })
+
+-- mini.git related keymaps
+vim.api.nvim_set_keymap('n', '<Leader>ga', ':Git add %<CR>', { desc = 'Git add the changes in the current file', noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>g.', ':Git add .<CR>', { desc = 'Git add all changes', noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>gc', ':Git commit<CR>', { desc = 'Git Commit', noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>gs', ':Git status<CR>', { desc = 'Git Status', noremap = true })
 
 -- vim: ts=2 sts=2 sw=2 et
