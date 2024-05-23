@@ -94,6 +94,7 @@ vim.keymap.set('n', '<leader>sc', 'z=', { desc = '[S]pell Check suggestions', re
 vim.api.nvim_set_keymap('n', '<Leader>ga', ':Git add %<CR>', { desc = 'Git add the changes in the current file', noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>g.', ':Git add .<CR>', { desc = 'Git add all changes', noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>gc', ':Git commit<CR>', { desc = 'Git Commit', noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>gp', ':Git push<CR>', { desc = 'Git Push', noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>gs', ':Git status<CR>', { desc = 'Git Status', noremap = true })
 
 -- vim: ts=2 sts=2 sw=2 et
