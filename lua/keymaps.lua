@@ -57,9 +57,6 @@ vim.keymap.set({ 'v', 'n' }, '<C-u>', '<C-u>zz')
 vim.keymap.set({ 'v', 'n' }, '<C-d>', '<C-d>zz')
 -- Paste with leader so we dont lose whats being pasted (on the buffer)
 vim.keymap.set('v', '<leader>p', '"_dP')
--- Set keybinds for window resize
-vim.keymap.set('n', '<C-+>', '<C-W>>')
-vim.keymap.set('n', '<C-_>', '<C-W><')
 -- Toggle diagnostics on and off
 local diagnostics_active = true
 vim.keymap.set('n', '<leader>tt', function()
