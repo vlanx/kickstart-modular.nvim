@@ -5,7 +5,7 @@ return {
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       { 'williamboman/mason.nvim', config = true, opts = {
-        ui = { border = 'single' },
+        ui = { border = 'rounded' },
       } }, -- NOTE: Must be loaded before dependants
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
@@ -19,7 +19,7 @@ return {
             window = {
               normal_hl = 'Comment', -- Base highlight group in the notification window
               winblend = 0, -- Background color opacity in the notification window
-              border = 'single', -- Border around the notification window
+              border = 'rounded', -- Border around the notification window
               zindex = 45, -- Stacking priority of the notification window
             },
           },
