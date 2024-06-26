@@ -1,9 +1,8 @@
 return {
   'f4z3r/gruvbox-material.nvim',
-  -- dir = '~/Github/gruvbox-material.nvim',
   lazy = false,
   priority = 1000,
-  -- dev = true,
+  enabled = true,
   opts = {
     contrast = 'hard',
     background = {
