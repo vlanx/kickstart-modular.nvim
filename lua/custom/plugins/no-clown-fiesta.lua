@@ -13,10 +13,11 @@ return {
 
           -- You can set any of the style values specified for `:h nvim_set_hl`
           match_paren = { bold = true, fg = palette.red, underline = false },
-          type = { bold = true },
+          type = { bold = false },
           lsp = { underline = true },
         },
       }
+      vim.cmd [[colorscheme no-clown-fiesta]]
     end,
   },
 }
