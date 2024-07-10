@@ -81,6 +81,12 @@ vim.keymap.set('n', '<leader>ot', function()
   vim.cmd 'terminal'
   vim.cmd 'startinsert'
 end)
+vim.keymap.set('n', '<leader>ov', function()
+  vim.cmd 'vertical 90 split'
+  vim.cmd 'lcd %:p:h'
+  vim.cmd 'terminal'
+  vim.cmd 'startinsert'
+end)
 vim.keymap.set('t', 'kj', '<C-\\><C-n>', options)
 vim.keymap.set('t', 'jk', '<C-\\><C-n>', options)
 
