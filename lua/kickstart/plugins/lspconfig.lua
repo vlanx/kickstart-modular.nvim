@@ -27,35 +27,11 @@ return {
 
       -- Useful status updates for LSP.
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      {
-        'j-hui/fidget.nvim',
-        opts = {
-          notification = {
-            window = {
-              normal_hl = 'Comment', -- Base highlight group in the notification window
-              winblend = 0, -- Background color opacity in the notification window
-              border = 'rounded', -- Border around the notification window
-              zindex = 45, -- Stacking priority of the notification window
-            },
-          },
-        },
+      { 'j-hui/fidget.nvim', opts = {} },
 
-      -- Allows extra capabilities provided by nvim-cmp
-      'hrsh7th/cmp-nvim-lsp',
-        -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
-        -- used for completion, annotations and signatures of Neovim apis
-        {
-          'folke/lazydev.nvim',
-          ft = 'lua', -- only load on lua files
-          opts = {
-            library = {
-              -- See the configuration section for more details
-              -- Load luvit types when the `vim.uv` word is found
-              { path = 'luvit-meta/library', words = { 'vim%.uv' } },
-            },
-          },
-        },
-      },
+      -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
+      -- used for completion, annotations and signatures of Neovim apis
+      { 'folke/neodev.nvim', opts = {} },
     },
     config = function()
       -- Brief aside: **What is LSP?**
