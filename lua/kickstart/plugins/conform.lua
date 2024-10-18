@@ -34,6 +34,7 @@ return {
         -- is found.
         -- javascript = { { "prettierd", "prettier" } },
         yaml = { 'yq' },
+        json = { 'jq' },
         bash = { 'shfmt' },
       },
     },
