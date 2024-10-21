@@ -11,6 +11,7 @@ return {
         },
         float = {
           padding = 7,
+          border = 'none',
         },
       }
     end,

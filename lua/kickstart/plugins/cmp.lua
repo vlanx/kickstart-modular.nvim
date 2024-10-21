@@ -42,11 +42,11 @@ return {
       -- Add tiny icons to completion plugin
       local lspkind = require 'lspkind'
       -- Add a border around the documentation of the auto complete command
-      cmp.setup {
-        window = {
-          documentation = cmp.config.window.bordered(),
-        },
-      }
+      -- cmp.setup {
+      --   window = {
+      --     documentation = cmp.config.window.bordered(),
+      --   },
+      -- }
       luasnip.config.setup {}
 
       cmp.setup {

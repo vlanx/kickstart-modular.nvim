@@ -19,9 +19,9 @@ return {
     event = 'VeryLazy', -- Sets the loading event to 'VimEnter'
     config = function() -- This is the function that runs, AFTER loading
       require('which-key').setup {
-        win = {
-          border = 'single',
-        },
+        -- win = {
+        --   border = 'single',
+        -- },
       }
 
       -- Document existing key chains

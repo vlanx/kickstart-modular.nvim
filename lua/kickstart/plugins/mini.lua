@@ -36,9 +36,6 @@ return {
         },
       }
 
-      -- Git commands from the mini.nvim collection.
-      require('mini.git').setup()
-
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
