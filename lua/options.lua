@@ -91,4 +91,11 @@ vim.o.spell = true
 vim.o.spelloptions = 'camel'
 vim.o.spelllang = 'en_us'
 
+-- When we leave Neovim, reset the cursor to vertical line.
+vim.api.nvim_create_autocmd({ 'VimLeave' }, {
+  pattern = { '*' },
+  callback = function()
+    vim.o.guicursor = 'a:ver20'
+  end,
+})
 -- vim: ts=2 sts=2 sw=2 et
