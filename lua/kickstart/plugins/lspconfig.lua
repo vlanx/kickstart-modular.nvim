@@ -217,6 +217,7 @@ return {
             },
           },
         },
+        clangd = {},
         pyright = {},
         bashls = {},
         -- dockerls = {},

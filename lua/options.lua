@@ -68,8 +68,6 @@ vim.opt.wrap = false
 vim.opt.termguicolors = true
 -- Disable swap file
 vim.opt.swapfile = false
--- Signs column
-vim.opt.signcolumn = 'yes'
 
 -- Add borders to the floating windows, used for the hovered documentation from the lsp and diagnostics
 -- vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
@@ -98,4 +96,8 @@ vim.api.nvim_create_autocmd({ 'VimLeave' }, {
     vim.o.guicursor = 'a:ver20'
   end,
 })
+
+-- This is temporary, until automatic background behavior is corrected.
+vim.o.background = 'dark'
+
 -- vim: ts=2 sts=2 sw=2 et
