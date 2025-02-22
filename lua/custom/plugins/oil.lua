@@ -10,7 +10,7 @@ return {
           show_hidden = true,
         },
         float = {
-          padding = 7,
+          padding = 8,
           border = 'none',
         },
       }

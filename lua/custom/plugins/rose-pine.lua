@@ -9,6 +9,7 @@ return {
         italic = false,
       },
       highlight_groups = {
+        -- Telescope enhancements
         TelescopeBorder = { fg = 'overlay', bg = 'overlay' },
         TelescopeNormal = { fg = 'subtle', bg = 'overlay' },
         TelescopeSelection = { fg = 'text', bg = 'highlight_med' },
@@ -21,7 +22,9 @@ return {
 
         TelescopePromptNormal = { fg = 'text', bg = 'surface' },
         TelescopePromptBorder = { fg = 'surface', bg = 'surface' },
-        NormalFloat = { bg = 'overlay' }, -- I like the floating windows to have a more prominent background
+
+        -- I like the floating windows to have a more prominent background
+        NormalFloat = { bg = 'overlay' },
       },
     }
     vim.cmd 'colorscheme rose-pine'

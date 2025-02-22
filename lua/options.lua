@@ -69,33 +69,10 @@ vim.opt.termguicolors = true
 -- Disable swap file
 vim.opt.swapfile = false
 
--- Add borders to the floating windows, used for the hovered documentation from the lsp and diagnostics
--- vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
---   border = 'rounded',
--- })
--- vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
---   border = 'rounded',
--- })
-
--- Enable border on the diagnostics window
--- vim.diagnostic.config {
---   float = {
---     border = 'rounded',
---   },
--- }
-
 -- Set spell and its options
 vim.o.spell = true
 vim.o.spelloptions = 'camel'
 vim.o.spelllang = 'en_us'
-
--- When we leave Neovim, reset the cursor to vertical line.
--- vim.api.nvim_create_autocmd({ 'VimLeave' }, {
---   pattern = { '*' },
---   callback = function()
---     vim.o.guicursor = 'a:ver20'
---   end,
--- })
 
 -- This is temporary, until automatic background behavior is corrected.
 vim.o.background = 'dark'
