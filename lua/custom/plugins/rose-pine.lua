@@ -25,6 +25,7 @@ return {
 
         -- I like the floating windows to have a more prominent background
         NormalFloat = { bg = 'overlay' },
+        GitSignsDeleteLn = { link = 'DiffDelete' },
       },
     }
     vim.cmd 'colorscheme rose-pine'
