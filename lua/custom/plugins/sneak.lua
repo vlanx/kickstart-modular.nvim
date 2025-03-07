@@ -3,6 +3,7 @@ return {
   config = function()
     -- Change default vim-sneak mapping from 's' to '\'
     vim.keymap.set({ 'n', 'x' }, '+', '<Plug>Sneak_s', { desc = 'Vim Sneak keybind forwards' })
+    vim.keymap.set({ 'n', 'x' }, '=', '<Plug>Sneak_S', { desc = 'Vim Sneak keybind forwards' })
     vim.keymap.set({ 'n', 'x' }, '\\', '<Plug>SneakLabel_s', { desc = 'Vim Sneak Label keybind forwards' })
     vim.keymap.set({ 'n', 'x' }, '|', '<Plug>SneakLabel_S', { desc = 'Vim Sneak Label keybind backwards' })
 
@@ -14,5 +15,6 @@ return {
 
     -- Set label-mode
     vim.g['sneak#label'] = 1
+    -- vim.g['sneak#use_ic_scs'] = 1
   end,
 }

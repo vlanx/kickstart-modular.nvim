@@ -244,10 +244,6 @@ return {
         clangd = {},
         pyright = {},
         bashls = {},
-        -- dockerls = {},
-        -- helm_ls = {},
-        -- yamlls = {},
-        -- html = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
