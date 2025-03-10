@@ -4,9 +4,12 @@ return {
   enabled = true,
   config = function()
     require('rose-pine').setup {
-      variant = 'moon',
+      variant = 'dawn',
       styles = {
         italic = false,
+      },
+      groups = {
+        git_change = 'gold',
       },
       highlight_groups = {
         -- Telescope enhancements

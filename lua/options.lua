@@ -75,6 +75,6 @@ vim.o.spelloptions = 'camel'
 vim.o.spelllang = 'en_us'
 
 -- This is temporary, until automatic background behavior is corrected.
-vim.o.background = 'dark'
+-- vim.o.background = 'dark'
 
 -- vim: ts=2 sts=2 sw=2 et
