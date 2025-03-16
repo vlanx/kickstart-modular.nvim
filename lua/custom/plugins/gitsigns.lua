@@ -29,7 +29,7 @@ return {
       linehl = true,
       preview_config = {
         -- Options passed to nvim_open_win
-        border = 'single',
+        border = 'none',
       },
       on_attach = function(bufnr) -- asdasd
         local gitsigns = require 'gitsigns'
