@@ -50,8 +50,8 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -75,6 +75,6 @@ vim.o.spelloptions = 'camel'
 vim.o.spelllang = 'en_us'
 
 -- This is temporary, until automatic background behavior is corrected.
--- vim.o.background = 'dark'
+-- vim.o.background = 'light'
 
 -- vim: ts=2 sts=2 sw=2 et
