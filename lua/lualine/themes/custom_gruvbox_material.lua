@@ -105,23 +105,23 @@ return {
   },
   visual = {
     a = { bg = palette.none[1], fg = palette.bg_red[1], gui = 'bold' },
-    b = { bg = palette.none[1], fg = palette.grey2[1] },
-    c = { bg = palette.none[1], fg = palette.grey2[1] },
+    b = { bg = palette.none[1], fg = palette.grey2[1], gui = 'bold' },
+    c = { bg = palette.none[1], fg = palette.grey2[1], gui = 'bold' },
   },
   replace = {
     a = { bg = palette.none[1], fg = palette.bg_yellow[1], gui = 'bold' },
-    b = { bg = palette.none[1], fg = palette.grey2[1] },
-    c = { bg = palette.none[1], fg = palette.grey2[1] },
+    b = { bg = palette.none[1], fg = palette.grey2[1], gui = 'bold' },
+    c = { bg = palette.none[1], fg = palette.grey2[1], gui = 'bold' },
   },
   command = {
     a = { bg = palette.none[1], fg = palette.blue[1], gui = 'bold' },
-    b = { bg = palette.none[1], fg = palette.grey2[1] },
-    c = { bg = palette.none[1], fg = palette.grey2[1] },
+    b = { bg = palette.none[1], fg = palette.grey2[1], gui = 'bold' },
+    c = { bg = palette.none[1], fg = palette.grey2[1], gui = 'bold' },
   },
   terminal = {
     a = { bg = palette.none[1], fg = palette.purple[1], gui = 'bold' },
-    b = { bg = palette.none[1], fg = palette.fg1[1] },
-    c = { bg = palette.none[1], fg = palette.fg1[1] },
+    b = { bg = palette.none[1], fg = palette.fg1[1], gui = 'bold' },
+    c = { bg = palette.none[1], fg = palette.fg1[1], gui = 'bold' },
   },
   inactive = {
     a = { bg = palette.bg_statusline1[1], fg = palette.grey2[1] },
