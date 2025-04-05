@@ -5,7 +5,7 @@ return {
   enabled = true,
   config = function()
     vim.g.gruvbox_material_background = 'soft'
-    vim.o.background = 'light'
+    -- vim.o.background = 'light'
     vim.g.gruvbox_material_current_word = 'high contrast background'
     -- Show errors and diagnostics in an highlighted manner.
     vim.g.gruvbox_material_diagnostic_virtual_text = 'highlighted'
