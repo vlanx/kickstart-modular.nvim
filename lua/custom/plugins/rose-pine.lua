@@ -1,10 +1,11 @@
 return {
   'rose-pine/neovim',
   name = 'rose-pine',
-  enabled = false,
+  enabled = true,
   config = function()
     require('rose-pine').setup {
-      variant = 'dawn',
+      variant = 'auto',
+      dark_variant = 'main',
       styles = {
         italic = false,
       },
