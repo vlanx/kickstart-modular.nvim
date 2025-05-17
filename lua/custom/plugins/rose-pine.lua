@@ -1,5 +1,7 @@
 return {
   'rose-pine/neovim',
+  lazy = false,
+  priority = 1000,
   name = 'rose-pine',
   enabled = true,
   config = function()
@@ -29,6 +31,7 @@ return {
 
         -- I like the floating windows to have a more prominent background
         NormalFloat = { bg = 'overlay' },
+        BlinkCmpDoc = { bg = 'overlay' },
         GitSignsDeleteLn = { link = 'DiffDelete' },
       },
     }

@@ -74,9 +74,6 @@ vim.o.spell = true
 vim.o.spelloptions = 'camel'
 vim.o.spelllang = 'en_us'
 
--- This is temporary, until automatic background behavior is corrected.
--- vim.o.background = 'light'
-
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`

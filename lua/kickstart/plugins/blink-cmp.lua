@@ -76,7 +76,7 @@ return {
       completion = {
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
-        documentation = { auto_show = false, auto_show_delay_ms = 200 },
+        documentation = { auto_show = true, auto_show_delay_ms = 200 },
 
         -- Do not introduce the completion in the buffer
         list = { selection = { preselect = true, auto_insert = false } },
