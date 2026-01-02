@@ -79,15 +79,4 @@ vim.o.spelllang = 'en_us'
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
---
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'markdown',
-  callback = function()
-    vim.opt_local.wrap = true
-    vim.opt_local.linebreak = true
-    vim.opt_local.conceallevel = 2
-    -- vim.opt_local.spell = true -- enable if you write real prose
-  end,
-})
-
 -- vim: ts=2 sts=2 sw=2 et
