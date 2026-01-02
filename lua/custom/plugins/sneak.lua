@@ -1,10 +1,6 @@
 return {
   'justinmk/vim-sneak',
   init = function()
-    -- Change default vim-sneak mapping from 's' to '\'
-    vim.keymap.set({ 'n', 'x' }, '\\', '<Plug>Sneak_s', { desc = 'Vim Sneak keybind forwards' })
-    vim.keymap.set({ 'n', 'x' }, '|', '<Plug>Sneak_S', { desc = 'Vim Sneak keybind forwards' })
-
     -- Change f/F and t/T commands to the vim-sneak enhanced ones
     vim.keymap.set({ 'n', 'x' }, 'f', '<Plug>Sneak_f', { desc = 'Vim Sneak keybind forwards' })
     vim.keymap.set({ 'n', 'x' }, 'F', '<Plug>Sneak_F', { desc = 'Vim Sneak keybind backwards' })

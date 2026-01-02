@@ -6,8 +6,8 @@ return {
   enabled = true,
   config = function()
     require('rose-pine').setup {
-      variant = 'main',
-      dark_variant = 'main',
+      variant = 'auto',
+      dark_variant = 'moon',
       styles = {
         italic = false,
       },
