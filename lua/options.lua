@@ -70,7 +70,7 @@ vim.opt.termguicolors = true
 vim.opt.swapfile = false
 
 -- Set spell and its options
-vim.o.spell = true
+vim.o.spell = false
 vim.o.spelloptions = 'camel'
 vim.o.spelllang = 'en_us'
 
