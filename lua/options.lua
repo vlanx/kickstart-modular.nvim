@@ -65,7 +65,7 @@ vim.opt.scrolloff = 15
 -- Don't wrap lines that go beyond terminal width
 vim.opt.wrap = false
 -- Set colors
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 -- Disable swap file
 vim.opt.swapfile = false
 
