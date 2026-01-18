@@ -3,7 +3,7 @@ return {
   lazy = false,
   priority = 1000,
   name = 'rose-pine',
-  enabled = true,
+  enabled = false,
   config = function()
     require('rose-pine').setup {
       variant = 'auto',
