@@ -6,8 +6,12 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
+vim.keymap.set('n', ']d', function()
+  vim.diagnostic.jump { count = 1, float = true }
+end, { desc = 'Go to next [D]iagnostic message' })
+vim.keymap.set('n', '[d', function()
+  vim.diagnostic.jump { count = -1, float = true }
+end, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
@@ -88,5 +92,9 @@ vim.api.nvim_create_autocmd('FileType', {
     -- vim.opt_local.spell = true -- enable if you write real prose
   end,
 })
+
+-- Remap for a slighly more ergonimic block navigation `]}` and `[{`
+vim.keymap.set({ 'v', 'n' }, '<leader>[', '[{', { desc = 'Jump to start of block' })
+vim.keymap.set({ 'v', 'n' }, '<leader>]', ']}', { desc = 'Jump to end of block' })
 
 -- vim: ts=2 sts=2 sw=2 et
