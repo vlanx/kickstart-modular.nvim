@@ -1,4 +1,6 @@
 -- LSP Plugins
+---@module 'lazy'
+---@type LazySpec
 return {
   {
     -- Main LSP Configuration
