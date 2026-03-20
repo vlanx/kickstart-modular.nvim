@@ -12,9 +12,10 @@ return {
       bold_functions = false,
       semantic_highlights = true,
       transparent = true,
+      theme = 'dark',
       overrides = {
         -- Type = { fg = '#83a598' }, -- Hex override
-        ['Type'] = { link = '@function.method.call' }, -- Link to another group
+        -- ['Type'] = { link = 'WinSeparator' }, -- Link to another group
         Visual = { link = 'Substitute' },
         ['@keyword.return'] = { link = 'Function' }, -- Highlight return keyword the same as accent color
       },

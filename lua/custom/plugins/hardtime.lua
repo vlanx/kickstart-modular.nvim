@@ -2,7 +2,7 @@ return {
   {
     'm4xshen/hardtime.nvim',
     dependencies = { 'MunifTanjim/nui.nvim' },
-    enabled = true,
+    enabled = false,
     opts = {
       max_time = 5000,
       hints = {
