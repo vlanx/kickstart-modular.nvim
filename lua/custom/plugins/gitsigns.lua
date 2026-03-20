@@ -29,6 +29,12 @@ return {
       topdelete = { text = '‾' }, ---@diagnostic disable-line: missing-fields
       changedelete = { text = '~' }, ---@diagnostic disable-line: missing-fields
     },
+    signcolumn = false,
+    linehl = true,
+    preview_config = {
+      -- Options passed to nvim_open_win
+      border = 'none',
+    },
     on_attach = function(bufnr)
       local gitsigns = require 'gitsigns'
 
