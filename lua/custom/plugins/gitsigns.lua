@@ -31,6 +31,7 @@ return {
     },
     signcolumn = false,
     linehl = true,
+    word_diff = true,
     preview_config = {
       -- Options passed to nvim_open_win
       border = 'none',

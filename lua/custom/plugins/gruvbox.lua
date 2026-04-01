@@ -12,12 +12,19 @@ return {
       bold_functions = false,
       semantic_highlights = true,
       transparent = true,
-      theme = 'dark',
+      theme = 'light',
       overrides = {
         -- Type = { fg = '#83a598' }, -- Hex override
         -- ['Type'] = { link = 'WinSeparator' }, -- Link to another group
         Visual = { link = 'Substitute' },
         ['@keyword.return'] = { link = 'Function' }, -- Highlight return keyword the same as accent color
+
+        GitSignsAddInline = { link = 'DiffTextAdd' },
+        GitSignsChangeInline = { link = 'DiffText' },
+        GitSignsDeleteInline = { link = 'DiffDelete' },
+        GitSignsAddLnInline = { link = 'DiffTextAdd' },
+        GitSignsChangeLnInline = { link = 'DiffText' },
+        GitSignsDeleteLnInline = { link = 'DiffDelete' },
       },
       italic_functions = false, -- Italic functions and methods
     }
