@@ -84,9 +84,6 @@ vim.keymap.set('n', '<leader>tt', function()
   end
 end, { desc = 'Toggle Diagnostics' })
 
--- Keymap to bring up Whichkey's spell suggestions (z=)
-vim.keymap.set('n', '<leader>sc', 'z=', { desc = '[S]pell Check suggestions', remap = true })
-
 -- Autocmd to enable line wrapping on markdown files
 
 vim.api.nvim_create_autocmd('FileType', {
@@ -95,7 +92,8 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.wrap = true
     vim.opt_local.linebreak = true
     vim.opt_local.conceallevel = 2
-    -- vim.opt_local.spell = true -- enable if you write real prose
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = { 'en' }
   end,
 })
 
