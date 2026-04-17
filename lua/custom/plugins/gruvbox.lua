@@ -11,8 +11,8 @@ return {
       accent = 'red',
       bold_functions = false,
       semantic_highlights = true,
-      transparent = true,
-      theme = 'light',
+      transparent = false,
+      theme = 'dark',
       overrides = {
         -- Type = { fg = '#83a598' }, -- Hex override
         -- ['Type'] = { link = 'WinSeparator' }, -- Link to another group
