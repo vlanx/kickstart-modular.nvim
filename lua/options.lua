@@ -24,6 +24,10 @@ vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 -- Enable break indent
 vim.o.breakindent = true
 
+-- Keep folds open by default when entering a buffer.
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+
 -- Enable undo/redo changes even after closing and reopening a file
 vim.o.undofile = true
 
@@ -39,7 +43,7 @@ vim.opt.updatetime = 100
 
 -- Decrease mapped sequence wait time
 -- Displays which-key popup sooner
-vim.opt.timeoutlen = 250
+vim.opt.timeoutlen = 150
 
 -- Configure how new splits should be opened
 vim.o.splitright = true

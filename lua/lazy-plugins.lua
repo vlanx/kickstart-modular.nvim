@@ -11,7 +11,7 @@
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added via a link or github org/name. To run setup automatically, use `opts = {}`
-  { 'NMAC427/guess-indent.nvim', opts = {} },
+  { 'NMAC427/guess-indent.nvim', event = 'BufReadPre', opts = {} },
 
   -- modular approach: using `require 'path.name'` will
   -- include a plugin definition from file lua/path/name.lua
@@ -88,7 +88,7 @@ require('lazy').setup({
       disabled_plugins = {
         'gzip',
         'matchit',
-        -- 'netrwPlugin',
+        'netrwPlugin',
         'tarPlugin',
         'tohtml',
         'tutor',
