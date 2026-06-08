@@ -8,6 +8,7 @@ return {
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
+    event = { 'BufReadPost', 'BufNewFile' },
     opts = {
       indent = {
         char = '▏',

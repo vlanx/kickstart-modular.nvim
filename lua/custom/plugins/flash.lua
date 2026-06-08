@@ -3,11 +3,11 @@ return {
   event = 'VeryLazy',
   ---@type Flash.Config
   opts = {
-    modes = { search = { enabled = true } },
+    modes = { search = { enabled = false } },
   },
   keys = {
     {
-      '\\',
+      's',
       mode = { 'n', 'x', 'o' },
       function()
         require('flash').jump()
@@ -15,7 +15,7 @@ return {
       desc = 'Flash',
     },
     {
-      '|',
+      'S',
       mode = { 'n', 'x', 'o' },
       function()
         require('flash').treesitter()
