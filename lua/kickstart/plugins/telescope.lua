@@ -20,7 +20,23 @@ return {
     -- it’s best to remove the Telescope plugin config entirely
     -- instead of just disabling it here, to keep your config clean.
     enabled = true,
-    event = 'VimEnter',
+    cmd = 'Telescope',
+    keys = {
+      '<leader>sh',
+      '<leader>sk',
+      '<leader>sf',
+      '<leader>ss',
+      { '<leader>sw', mode = { 'n', 'v' } },
+      '<leader>sg',
+      '<leader>sd',
+      '<leader>sr',
+      '<leader>s.',
+      '<leader>sc',
+      '<leader><leader>',
+      '<leader>/',
+      '<leader>s/',
+      '<leader>sn',
+    },
     dependencies = {
       'nvim-lua/plenary.nvim',
       { -- If encountering errors, see telescope-fzf-native README for installation instructions

@@ -3,6 +3,7 @@
 return {
   { -- Collection of various small independent plugins/modules
     'nvim-mini/mini.nvim',
+    event = 'VeryLazy',
     config = function()
       -- Better Around/Inside textobjects
       --
@@ -21,10 +22,22 @@ return {
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
-      -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-      -- - sd'   - [S]urround [D]elete [']quotes
-      -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
+      -- - gsaiw) - [G]o [S]urround [A]dd [I]nner [W]ord [)]Paren
+      -- - gsd'   - [G]o [S]urround [D]elete [']quotes
+      -- - gsr)'  - [G]o [S]urround [R]eplace [)] [']
+      require('mini.surround').setup {
+        mappings = {
+          add = 'gsa',
+          delete = 'gsd',
+          find = 'gsf',
+          find_left = 'gsF',
+          highlight = 'gsh',
+          replace = 'gsr',
+
+          suffix_last = 'l',
+          suffix_next = 'n',
+        },
+      }
 
       -- Move text or whole sections of text up/down/left/right
       -- Changed mappings for the OPTION+HJKL character

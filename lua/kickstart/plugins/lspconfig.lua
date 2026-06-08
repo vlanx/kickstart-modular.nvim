@@ -5,7 +5,7 @@ return {
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
-    event = 'BufReadPost',
+    ft = { 'bash', 'c', 'cpp', 'go', 'lua', 'python', 'sh', 'yaml', 'yaml.docker-compose', 'yaml.gitlab', 'yaml.helm-values', 'zsh' },
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       -- Mason must be loaded before its dependents so we need to set it up here.
@@ -190,8 +190,38 @@ return {
           },
         },
         clangd = {},
-        pyright = {},
+        ruff = {
+          on_attach = function(client)
+            -- Pyright provides better Python hover information; Ruff handles linting/code actions.
+            client.server_capabilities.hoverProvider = false
+          end,
+        },
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                diagnosticSeverityOverrides = {
+                  reportDuplicateImport = 'none',
+                  reportUnusedImport = 'none',
+                  reportUnusedVariable = 'none',
+                },
+              },
+            },
+          },
+        },
         bashls = {},
+        yamlls = {
+          settings = {
+            redhat = { telemetry = { enabled = false } },
+            yaml = {
+              validate = true,
+              completion = true,
+              hover = true,
+              format = { enable = true },
+              schemaStore = { enable = true },
+            },
+          },
+        },
         lua_ls = {
           on_init = function(client)
             client.server_capabilities.documentFormattingProvider = false -- Disable formatting (formatting is done by stylua)

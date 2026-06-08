@@ -4,7 +4,10 @@
 return {
   {
     'folke/todo-comments.nvim',
-    event = 'VimEnter',
+    event = 'VeryLazy',
+    keys = {
+      { '<leader>st', '<cmd>TodoTelescope<cr>', desc = '[S]earch [T]odos' },
+    },
     dependencies = { 'nvim-lua/plenary.nvim' },
     ---@module 'todo-comments'
     ---@type TodoOptions
